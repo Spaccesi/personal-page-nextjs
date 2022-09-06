@@ -2,7 +2,7 @@ import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 import Script from 'next/script'
 
-const isProduction = process.env.NEXT_PUBLIC_PROD === "production";
+const isProduction = process.env.NEXT_PUBLIC_ENV === "production";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -11,9 +11,9 @@ function MyApp({ Component, pageProps }: AppProps) {
       <>
         <Script
             src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTIC_ID}`}
-            strategy="lazyOnload"
+            strategy="afterInteractive"
           />
-          <Script id="google-analytics" strategy="lazyOnload">
+          <Script id="google-analytics" strategy="afterInteractive">
             {`
               window.dataLayer = window.dataLayer || [];
               function gtag(){window.dataLayer.push(arguments);}
