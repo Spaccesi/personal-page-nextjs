@@ -1,5 +1,6 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import HeroSection from '../components/HeroSection'
 import Navbar from '../components/Navbar'
 
 const Home: NextPage = () => {
@@ -11,23 +12,11 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
-
-      <main>
-        <h1>
-          Coming soon!
-        </h1>
-        <h2>
-          Coming soon!
-        </h2>
-        <h3>
-          Coming soon!
-        </h3>
-        <li>sadsa</li>
-        <button>asds</button>
+      <main className='h-screen pt-40'>
+        <HeroSection />
       </main>
-
     </div>
   )
 }
 
-export default Home
+export default Home;

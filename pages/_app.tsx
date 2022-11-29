@@ -5,7 +5,7 @@ import Script from 'next/script'
 function MyApp({ Component, pageProps }: AppProps) {
   return (
   <>
-    {process.env.NEXT_PUBLIC_ENV == "production" && (
+    {process.env.NEXT_PUBLIC_ENV === "production" && (
       <>
         <Script
             src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTIC_ID}`}

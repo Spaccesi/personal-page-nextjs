@@ -2,33 +2,38 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 @layer base {
   body {
     @apply 
-      bg-[#1b1b1b]
+      bg-black
+      text-white
       tracking-wide
   }
 
-  main {
+  /* main {
     @apply 
       pt-20
-  }
+  } */
 
-  h1, h2, h3, h4, h5, h6 {
+  h1, h3, h4, h5, h6 {
     @apply font-bold
   }
 
   h1 {
     @apply 
-      text-4xl 
-      sm:text-5xl 
-      md:text-6xl
+      text-6xl 
+      sm:text-7xl 
+      md:text-8xl
   }
   h2 {
     @apply 
-      text-3xl 
-      sm:text-4xl 
-      md:text-5xl
+      text-lg
+      sm:text-xl 
+      md:text-2xl
   }
   h3 {
     @apply 
