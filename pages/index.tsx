@@ -12,7 +12,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
-      <main className='h-screen pt-40'>
+      <main className='h-screen pt-20 px-2 pb-2 lg:pt-36'>
         <HeroSection />
       </main>
     </div>

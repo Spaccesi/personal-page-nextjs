@@ -36,7 +36,7 @@ const Navbar = () => {
 
   return(
     <div className='z-50 fixed w-full lg:h-36 h-20'>
-      <div className='flex justify-between items-center w-full h-full px-2 2xl:px-6 border-b-2'>
+      <div className='flex justify-between items-center h-full px-2 2xl:px-6 border-b-2 backdrop-blur mx-2'>
         <Image src='/favicon.ico' width={50} height={50} alt='Agustin Spaccesi' />
         <div>
           <ul className='hidden md:flex'>
