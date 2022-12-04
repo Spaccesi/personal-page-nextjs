@@ -3,8 +3,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import { FaLinkedinIn } from 'react-icons/fa';
-import SwitchLanguage from './SwitchLanguage';
 import useTranslation from 'next-translate/useTranslation'
+import ThemeSwitcher from './ThemeSwitcher';
+import LanguageSwitcher from './LanguageSwitcher';
 
 const Navbar = () => {
 
@@ -35,8 +36,8 @@ const Navbar = () => {
   }
 
   return(
-    <div className='z-50 fixed w-full lg:h-36 h-20'>
-      <div className='flex justify-between items-center h-full px-2 2xl:px-6 border-b-2 backdrop-blur mx-2'>
+    <div className='z-50 fixed w-full md:h-28 lg:h-36 h-24'>
+      <div className='flex justify-between items-center h-full px-4 2xl:px-6 border-b-2 backdrop-blur'>
         <Image src='/favicon.ico' width={50} height={50} alt='Agustin Spaccesi' />
         <div>
           <ul className='hidden md:flex'>
@@ -45,7 +46,8 @@ const Navbar = () => {
               <li className='ml-10 text-sm hover:font-bold'>{link.title}</li>
             </Link>
           ))}
-            <li><SwitchLanguage /></li>
+            <li><LanguageSwitcher /></li>
+            <li><ThemeSwitcher /></li>
           </ul>
         </div>
         <div className='md:hidden z-50' onClick={handleNav}>

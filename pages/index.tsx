@@ -2,6 +2,7 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import HeroSection from '../components/HeroSection'
 import Navbar from '../components/Navbar'
+import SocialIcons from '../components/SocialIcons'
 
 const Home: NextPage = () => {
   return (
@@ -12,8 +13,9 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
-      <main className='h-screen pt-20 px-2 pb-2 lg:pt-36'>
+      <main>
         <HeroSection />
+        <SocialIcons />
       </main>
     </div>
   )

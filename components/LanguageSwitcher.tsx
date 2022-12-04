@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 
-const SwitchLanguage = () => {
+const LanguageSwitcher = () => {
 
   return (
     <div>
@@ -9,4 +9,4 @@ const SwitchLanguage = () => {
   );
 };
 
-export default SwitchLanguage;
+export default LanguageSwitcher;
