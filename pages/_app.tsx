@@ -5,7 +5,7 @@ import { ThemeProvider } from 'next-themes'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-  <ThemeProvider>
+  <ThemeProvider attribute="class" enableSystem={true}>
     {process.env.NEXT_PUBLIC_ENV === "production" && (
       <>
         <Script

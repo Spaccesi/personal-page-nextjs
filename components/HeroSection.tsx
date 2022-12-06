@@ -50,7 +50,7 @@ const HeroSection = () => {
         <p className="uppercase mt-auto max-w-xs"><Link href="">{t('common:at-the-moment')}</Link></p>
         <h2 className="uppercase mt-auto">{t('common:based-in')}</h2>
       </div>
-      <div className="absolute bottom-0 right-0 z-0">
+      <div className="absolute bottom-0 right-0 z-0 hidden">
         <ParticleImage
           src={"/foto.png"}
           scale={3}

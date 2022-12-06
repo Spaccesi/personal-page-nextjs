@@ -17,17 +17,9 @@ const Navbar = () => {
       link: '/'
     },
     {
-      title: t('common:About'),
-      link: '#about'
-    },
-    {
       title: t('common:Portfolio'),
       link: 'https://portfolio.spaccesi.com/'
-    },
-    {
-      title: t('common:Contact'),
-      link: '#contact'
-    },
+    }
   ]
 
   const [nav, setNav] = useState(false);
@@ -37,17 +29,17 @@ const Navbar = () => {
 
   return(
     <div className='z-50 fixed w-full md:h-28 lg:h-36 h-24'>
-      <div className='flex justify-between items-center h-full px-4 2xl:px-6 border-b-2 backdrop-blur'>
+      <div className='flex justify-between items-center h-full px-4 2xl:px-6 border-b-2 backdrop-blur border-black dark:border-white'>
         <Image src='/favicon.ico' width={50} height={50} alt='Agustin Spaccesi' />
         <div>
           <ul className='hidden md:flex'>
           {links.map((link, idx) => (
             <Link key={idx} href={link.link}>
-              <li className='ml-10 text-sm hover:font-bold'>{link.title}</li>
+              <li className='ml-10 text-sm hover:animate-bounce'>{link.title}</li>
             </Link>
           ))}
             <li><LanguageSwitcher /></li>
-            <li><ThemeSwitcher /></li>
+            <li className='ml-10 text-sm hover:animate-bounce'><ThemeSwitcher /></li>
           </ul>
         </div>
         <div className='md:hidden z-50' onClick={handleNav}>
