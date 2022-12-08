@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const SocialIcons = () => {
   return (
-    <div className='grid-rows-1 grid-flow-col grid gap-8 md:justify-start justify-end'>
+    <div className='grid-rows-1 grid-flow-col flex gap-8 justify-start'>
       <Link href={'https://www.linkedin.com/in/agustinspaccesi/'}>
         <SiLinkedin size={24}/>
       </Link>
