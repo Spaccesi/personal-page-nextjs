@@ -5,8 +5,12 @@
 html {
   scroll-behavior: smooth;
 }
+.react-icons {
+  vertical-align: middle;
+}
 
 @layer base {
+  
   body {
     @apply bg-[#f9f9f9] text-[#1b1b1b] tracking-wide;
     @apply dark:bg-black dark:text-gray-100;
@@ -27,15 +31,15 @@ html {
   }
 
   li {
-    @apply cursor-pointer;
+    @apply cursor-pointer text-base;
   }
 
   p {
     @apply text-sm;
   }
 
-  .bubble-button {
-    @apply rounded-full cursor-pointer p-3 bg-black text-white hover:scale-110 transition ease-in-out duration-150;
-    @apply dark:bg-white dark:text-black;
+  .social-icon {
+    @apply cursor-pointer p-3 hover:scale-110 transition ease-in-out duration-150;
+
   }
 }
