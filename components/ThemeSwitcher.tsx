@@ -1,5 +1,6 @@
 import React from "react";
 import { useTheme } from "next-themes";
+import {BsFillMoonFill, BsFillSunFill } from 'react-icons/bs'
 
 const ThemeSwitcher = () => {
   
@@ -12,7 +13,13 @@ const ThemeSwitcher = () => {
   };
 
   return (
-    <button onClick={changeTheme}>Click here!</button>
+    <button onClick={changeTheme} className='mt-1'>
+      {
+        currentTheme === 'light'
+        ? <BsFillMoonFill size={18}/> 
+        : <BsFillSunFill size={18}/>
+      }
+    </button>
   );
 }
 
