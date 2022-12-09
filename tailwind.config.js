@@ -6,6 +6,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        'whatever': ['Whatever it takes'],
+      }
     },
   },
   darkMode: 'class',

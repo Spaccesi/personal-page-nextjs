@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 html {
   scroll-behavior: smooth;
 }
@@ -10,6 +11,18 @@ html {
 }
 
 @layer base {
+
+  @font-face {
+    font-family: Whatever it takes;
+    font-weight: 400;
+    src: url("/fonts/whatever_it_takes/whatever_it_takes.woff2") format("woff2");
+  }
+
+  @font-face {
+    font-family: Whatever it takes;
+    font-weight: 800;
+    src: url("/fonts/whatever_it_takes/whatever_it_takes_bold.woff2") format("woff2");
+  }
   
   body {
     @apply bg-[#f9f9f9] text-[#1b1b1b] tracking-wide;
@@ -35,7 +48,7 @@ html {
   }
 
   p {
-    @apply text-sm;
+    @apply text-lg;
   }
 
   .social-icon {

@@ -60,7 +60,7 @@ const HeroSection = () => {
       <div className="h-full flex flex-col max-w-md relative z-10" id='hero'>
         <h1 className="mb-2 md:mt-10">Agustín Spaccesi</h1>
         <h2 className="uppercase">{t('common:sub-title')}</h2>
-        <p className="uppercase max-w-xs my-auto"><Link href="">{t('common:at-the-moment')}</Link></p>
+        <p className="max-w-xs my-auto font-whatever text-2xl skew-2"><Link href="">{t('common:at-the-moment')}</Link></p>
         <div className="hidden md:flex">
           <SocialIcons />
         </div>
