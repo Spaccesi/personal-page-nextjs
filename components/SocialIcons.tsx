@@ -5,16 +5,16 @@ import Link from "next/link";
 const SocialIcons = () => {
   return (
     <div className='grid-rows-1 grid-flow-col flex gap-8 justify-start'>
-      <Link href={'https://www.linkedin.com/in/agustinspaccesi/'}>
+      <Link href={`https://www.linkedin.com/in/${process.env.LINKEDIN}/`} className="hover:scale-110">
         <SiLinkedin size={24}/>
       </Link>
-      <Link href={'https://github.com/Spaccesi'}>
+      <Link href={`https://github.com/${process.env.GITHUB}/`} className="hover:scale-110">
         <SiGithub size={24}/>
       </Link>
-      <Link href={'https://wa.me/34695496544'}>
+      <Link href={`https://wa.me/${process.env.WHATSAPP}/`} className="hover:scale-110">
         <SiWhatsapp size={24}/>
       </Link>
-      <Link href={'mailto:agustin@spaccesi.com'}>
+      <Link href={`mailto:${process.env.EMAIL}`} className="hover:scale-110">
         <HiMail size={24}/>
       </Link>
     </div>

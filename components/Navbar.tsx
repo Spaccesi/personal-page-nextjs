@@ -37,7 +37,7 @@ const Navbar = () => {
           <ul className='hidden md:flex align-middle'>
           {links.map((link, idx) => (
             <Link key={idx} href={link.link}>
-              <li className='ml-10'>{link.title}</li>
+              <li className='ml-10 hover:scale-110'>{link.title}</li>
             </Link>
           ))}
             <li className='ml-10'><LanguageSwitcher /></li>
@@ -49,7 +49,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      <div className={ nav ? 'z-50 md:hidden fixed flex flex-col top-0 left-0 w-screen h-full bg-black/90 justify-center' : 'hidden' }>
+      <div className={ nav ? 'z-50 md:hidden fixed flex flex-col top-0 left-0 w-screen h-full bg-black/90 justify-center text-white' : 'hidden' }>
         <div className='px-4 md:h-28 lg:h-36 h-24 flex justify-end items-center w-full' >
           <AiOutlineClose size={25} onClick={handleNav}/>
         </div>

@@ -13,7 +13,7 @@ const ThemeSwitcher = () => {
   };
 
   return (
-    <button onClick={changeTheme} className='mt-1'>
+    <button onClick={changeTheme} className='mt-1 hover:scale-110'>
       {
         currentTheme === 'light'
         ? <BsFillMoonFill size={18}/> 

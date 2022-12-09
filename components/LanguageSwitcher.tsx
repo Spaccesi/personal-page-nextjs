@@ -7,7 +7,7 @@ const LanguageSwitcher = () => {
   const { locale, locales, asPath } = useRouter();
 
   return (
-    <Link href={asPath} className='text-lg' locale={locales?.filter((local) => {return(local != locale)})[0]}>
+    <Link href={asPath} className='text-lg hover:text-xl' locale={locales?.filter((local) => {return(local != locale)})[0]}>
       {locale === 'en' 
         ? '🇪🇸'  
         : '🇬🇧'
