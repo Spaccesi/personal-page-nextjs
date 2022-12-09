@@ -1,11 +1,12 @@
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 import Script from 'next/script'
+import { ThemeProvider } from 'next-themes'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-  <>
-    {process.env.NEXT_PUBLIC_ENV == "production" && (
+  <ThemeProvider attribute="class" enableSystem={true}>
+    {process.env.NEXT_PUBLIC_ENV === "production" && (
       <>
         <Script
             src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTIC_ID}`}
@@ -22,10 +23,15 @@ function MyApp({ Component, pageProps }: AppProps) {
         </Script>
       </>
     )}
+    <Script id='screen-size-mobile' strategy='beforeInteractive'>
+      {
+        "document.documentElement.style.setProperty('--vh', window.innerHeight * 0.01 + 'px')"
+      }
+    </Script>
     
     <Component {...pageProps} />
-  </>
+  </ThemeProvider>
   )
 }
 
-export default MyApp
+export default MyApp;

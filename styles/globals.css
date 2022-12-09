@@ -1,26 +1,72 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+html {
+  scroll-behavior: smooth;
+}
+.react-icons {
+  vertical-align: middle;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.h-screen-mobile {
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
 }
 
-* {
-  box-sizing: border-box;
-}
+@layer base {
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+  @supports (-webkit-touch-callout: none) {
+    .h-screen {
+      height: -webkit-fill-available;
+    }
   }
+
+  @font-face {
+    font-family: Whatever it takes;
+    font-weight: 400;
+    src: url("/fonts/whatever_it_takes/whatever_it_takes.woff2") format("woff2");
+  }
+
+  @font-face {
+    font-family: Whatever it takes;
+    font-weight: 800;
+    src: url("/fonts/whatever_it_takes/whatever_it_takes_bold.woff2") format("woff2");
+  }
+  
   body {
-    color: white;
-    background: black;
+    @apply bg-[#f9f9f9] text-[#1b1b1b] tracking-wide;
+    @apply dark:bg-black dark:text-gray-100;
+  }
+
+  h1 {
+    @apply font-bold;
+  }
+
+  h1 {
+    @apply text-7xl sm:text-8xl md:text-9xl;
+  }
+  h2 {
+    @apply text-lg sm:text-xl md:text-2xl;
+  }
+  h3 {
+    @apply text-2xl sm:text-3xl md:text-4xl;
+  }
+
+  li {
+    @apply cursor-pointer text-base;
+  }
+
+  .handwritten-text {
+    @apply font-whatever text-lg md:text-xl xl:text-3xl px-4;
+  }
+
+  p {
+    @apply text-lg;
+  }
+
+  .social-icon {
+    @apply cursor-pointer p-3 hover:scale-110 transition ease-in-out duration-150;
   }
 }
