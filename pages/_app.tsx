@@ -23,6 +23,11 @@ function MyApp({ Component, pageProps }: AppProps) {
         </Script>
       </>
     )}
+    <Script>
+      {
+        "document.documentElement.style.setProperty('--vh', window.innerHeight * 0.01 + 'px')"
+      }
+    </Script>
     
     <Component {...pageProps} />
   </ThemeProvider>

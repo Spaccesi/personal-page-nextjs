@@ -10,6 +10,11 @@ html {
   vertical-align: middle;
 }
 
+.h-screen-mobile {
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+}
+
 @layer base {
 
   @font-face {
@@ -53,6 +58,5 @@ html {
 
   .social-icon {
     @apply cursor-pointer p-3 hover:scale-110 transition ease-in-out duration-150;
-
   }
 }
