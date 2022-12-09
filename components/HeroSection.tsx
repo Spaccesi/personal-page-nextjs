@@ -56,11 +56,13 @@ const HeroSection = () => {
   }
 
   return (
-    <div className='h-screen w-screen px-2 pb-2 md:pt-36 lg:pt-42 pt-32'>
-      <div className="h-full flex flex-col max-w-md relative z-10" id='hero'>
-        <h1 className="mb-2 md:mt-10">Agustín Spaccesi</h1>
+    <div className='h-screen w-screen md:pt-28 lg:pt-36 pt-24'>
+      <div className="h-full flex flex-col max-w-lg relative z-10 pl-2 pb-2 bg-gradient-to-r from-white dark:from-black/70" id='hero'>
+        <h1 className="mb-2 mt-auto">Agustín<br/>Spaccesi</h1>
         <h2 className="uppercase">{t('common:sub-title')}</h2>
-        <p className="max-w-xs my-auto font-whatever text-2xl skew-2"><Link href="">{t('common:at-the-moment')}</Link></p>
+        <div className="max-w-xs my-auto handwritten-text">
+          <Link href="">// {t('common:at-the-moment')}</Link>
+        </div>
         <div className="hidden md:flex">
           <SocialIcons />
         </div>

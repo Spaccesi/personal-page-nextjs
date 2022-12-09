@@ -28,8 +28,8 @@ const Navbar = () => {
   }
 
   return(
-    <div className='z-50 fixed w-full md:h-28 lg:h-36 h-24'>
-      <div className='flex justify-between items-center h-full px-4 2xl:px-6 bg-[#f9f9f9]/50 dark:bg-black/50'>
+    <div className='z-50 fixed w-full md:h-28 lg:h-36 h-24 border-black dark:border-white border-b-2'>
+      <div className='flex justify-between items-center h-full px-4 2xl:px-6 bg-gradient-to-r from-white dark:from-black/70'>
         <Link href={'/'}>
           <Image src='/favicon.ico' width={50} height={50} alt='Agustin Spaccesi' />
         </Link>

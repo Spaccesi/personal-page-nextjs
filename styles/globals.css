@@ -17,6 +17,12 @@ html {
 
 @layer base {
 
+  @supports (-webkit-touch-callout: none) {
+    .h-screen {
+      height: -webkit-fill-available;
+    }
+  }
+
   @font-face {
     font-family: Whatever it takes;
     font-weight: 400;
@@ -42,7 +48,7 @@ html {
     @apply text-7xl sm:text-8xl md:text-9xl;
   }
   h2 {
-    @apply text-base sm:text-lg md:text-xl;
+    @apply text-lg sm:text-xl md:text-2xl;
   }
   h3 {
     @apply text-2xl sm:text-3xl md:text-4xl;
@@ -50,6 +56,10 @@ html {
 
   li {
     @apply cursor-pointer text-base;
+  }
+
+  .handwritten-text {
+    @apply font-whatever text-lg md:text-xl xl:text-3xl px-4;
   }
 
   p {
