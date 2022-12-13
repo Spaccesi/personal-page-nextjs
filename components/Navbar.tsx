@@ -40,7 +40,7 @@ const Navbar = () => {
               <li className='ml-10 hover:scale-110'>{link.title}</li>
             </Link>
           ))}
-            <li className='ml-10'><a href="assets/Resume-agustin-spaccesi.pdf" target="_blank">{t('common:Resume')}</a></li>
+            <li className='ml-10 hover:scale-110'><a href="assets/Resume-agustin-spaccesi.pdf" target="_blank">{t('common:Resume')}</a></li>
             <li className='ml-10'><LanguageSwitcher /></li>
             <li className='ml-10'><ThemeSwitcher /></li>
           </ul>
