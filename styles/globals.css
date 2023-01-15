@@ -34,6 +34,12 @@ html {
     font-weight: 800;
     src: url("/fonts/whatever_it_takes/whatever_it_takes_bold.woff2") format("woff2");
   }
+
+  @font-face {
+    font-family: Futura;
+    font-weight: 800;
+    src: url("/fonts/futura_extra_bold.woff2") format("woff2");
+  }
   
   body {
     @apply bg-[#f9f9f9] text-[#1b1b1b] tracking-wide;

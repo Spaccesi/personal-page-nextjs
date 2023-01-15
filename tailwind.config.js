@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'whatever': ['Whatever it takes'],
+        'whatever': ['Futura'],
       }
     },
   },
