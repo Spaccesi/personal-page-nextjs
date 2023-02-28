@@ -16,10 +16,10 @@ const Navbar = () => {
       title: t('common:Home'),
       link: '/'
     },
-    {
-      title: t('common:Portfolio'),
-      link: 'https://portfolio.spaccesi.com/'
-    }
+    // {
+    //   title: t('common:Portfolio'),
+    //   link: 'https://portfolio.spaccesi.com/'
+    // }
   ]
 
   const [nav, setNav] = useState(false);
