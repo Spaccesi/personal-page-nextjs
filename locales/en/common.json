@@ -5,8 +5,10 @@
   "Portfolio": "Portfolio",
   "About": "About",
   "Contac": "Contact",
-  "based-in": "Based in Valencia",
-  "sub-title": "Entrepreneur & Engineer",
-  "at-the-moment": "// At the moment changing sport management in football clubs at Cl",
+  "name": "Agustin",
+  "lastName": "Spaccesi",
+  "sub-title": "Ingeniero & Emprendedor",
+  "based-in": "VLC",
+  "at-the-moment": "PRODUCT; CODING; NEST.JS; DJANGO; PYTHON; FLUTTER; NEXT.JS;",
   "Resume": "Resume"
 }
