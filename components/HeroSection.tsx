@@ -9,7 +9,7 @@ const HeroSection = () => {
   const { t, lang } = useTranslation();
 
   return (
-    <div className='flex gap-8 pointer-events-none absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 dark:bg-black/40' id='hero'>
+    <div className='flex gap-8 pointer-events-none absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white/40 dark:bg-black/40 w-min h-min' id='hero'>
       {/* Left column */}
       <div className="w-min h-min">
         <div className="columns-2 flex gap-4 items-center">
@@ -20,16 +20,15 @@ const HeroSection = () => {
           <h2 className="uppercase text-center">{t('common:at-the-moment')}</h2>
       </div>
       {/* Right column */}
-      <div className="w-min h-min hidden md:max-2xl:block">
+      <div className="w-min h-min hidden md:block">
         <div className="flex columns-3 justify-center gap-2 items-center">
-          <div className="flex-col">
-          <Image
-            src="/assets/arrow.svg"
-            className="dark:invert"
-            alt="My SVG"
-            width={70}
-            height={70}
-          />
+          <div className="flex-col relative aspect-square h-10 lg:h-14">
+            <Image
+              src="/assets/arrow.svg"
+              alt=""
+              fill
+              className="dark:invert h-10 w-10"
+            />
           </div>
           <div className="flex-col">
             <h3 className="archivoBlack">UTC*</h3>

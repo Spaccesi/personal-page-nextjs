@@ -14,7 +14,7 @@ const BackgroundParticleImage = () => {
 
   const options = {
     scale: size.height / 230 > 3 ? size.height / 230 : 3,
-    width: size.height / 230 > 3 ? size.height : 3 * 200,
+    width: size.width,
     hight: size.height
   }
 
@@ -54,7 +54,7 @@ const BackgroundParticleImage = () => {
   }
 
   return (
-    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 -z-50 pointer-events-auto h-screen">
+    <div className="flex absolute top-1/2 left-1/2  -translate-x-1/2 -translate-y-1/2 -z-50 pointer-events-auto h-screen">
       <ParticleImage
         src={"/foto.png"}
         scale={options.scale}
