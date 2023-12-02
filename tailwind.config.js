@@ -1,16 +1,22 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
+    "./public/fonts/*.{ttf}",
+    "public/*.{html,js}",
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
       fontFamily: {
-        'whatever': ['Futura'],
+        archivoBlack: ['Archivo Black'],
+        linearBeam: ['Linear Beam'],
+        pixelmix: ['Pixelmix']
       }
     },
   },
   darkMode: 'class',
-  plugins: [],
+  plugins: [
+    // require('@tailwindcss/typography')
+  ],
 }

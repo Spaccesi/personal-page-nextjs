@@ -2,6 +2,7 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import HeroSection from '../components/HeroSection'
 import Navbar from '../components/Navbar'
+import BackgroundParticleImage from '../components/BackgroundParticleImage'
 
 const Home: NextPage = () => {
   return (
@@ -14,6 +15,7 @@ const Home: NextPage = () => {
       <Navbar />
       <main>
         <HeroSection />
+        <BackgroundParticleImage />
       </main>
     </div>
   )

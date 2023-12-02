@@ -1,8 +1,6 @@
-import ParticleImage, { forces, ParticleOptions } from "react-particle-image";
 import useTranslation from "next-translate/useTranslation";
-import Link from "next/link";
 import SocialIcons from "./SocialIcons";
-import useWindowSize from "../lib/UseWindowSize";
+import Image from 'next/image'
 
 
 
@@ -10,79 +8,45 @@ const HeroSection = () => {
 
   const { t, lang } = useTranslation();
 
-  const round = (n: number, step = 20) => Math.ceil(n / step) * step;
-
-  const size = useWindowSize();
-
-  const options = {
-    scale: size.height/230 > 3 ? size.height/230 : 3,
-    width: size.height/230 > 3 ? size.height : 3*200,
-    hight: size.height
-  }
-
-  const particleOptions: ParticleOptions = {
-    filter: ({ x, y, image }) => {
-      const pixel = image.get(x, y);
-      const magnitude = (pixel.r + pixel.g + pixel.b) / 3;
-      return magnitude > 10;
-    },
-    color: ({ x, y, image }) => {
-      const STEP = 30;
-      const pixel = image.get(x, y);
-      return `rgba(
-        ${round(pixel.r, STEP)}, 
-        ${round(pixel.g, STEP)}, 
-        ${round(pixel.b, STEP)}, 
-        ${round(pixel.a, STEP) / 255}
-      )`;
-    },
-    // radius: () => Math.random() * 2 + 2.5,
-    radius: ({ x, y, image }) => {
-      const pixel = image.get(x, y);
-      const magnitude = (pixel.r + pixel.g + pixel.b) / 3;
-      // Lighter colors will have smaller radius
-      return options.scale - ((255 - magnitude) / 255) * 1.5;
-    },
-    mass: () => 40,
-    friction: () => 0.15,
-  };
-
-  const motionForce = (x: number, y:number) => {
-    return forces.disturbance(x, y, 40)
-  }
-
-  const clinkForce = (x: number, y:number) => {
-    return forces.disturbance(x, y, 45)
-  }
-
   return (
-    <div className='h-screen w-screen md:pt-28 lg:pt-36 pt-24'>
-      <div className="h-full flex flex-col max-w-lg relative z-10 pl-2 pb-2 bg-gradient-to-r from-white dark:from-black/70" id='hero'>
-        <h1 className="mb-2 mt-10">Agustín Spaccesi</h1>
-        <h2 className="uppercase">{t('common:sub-title')}</h2>
-        {/* <div className="max-w-xs my-auto handwritten-text">
-          <Link href="">{t('common:at-the-moment')}</Link>
-        </div> */}
-        <div className="mt-auto hidden md:flex">
+    <div className='flex gap-8 pointer-events-none absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white/40 dark:bg-black/40 w-min h-min' id='hero'>
+      {/* Left column */}
+      <div className="w-min h-min">
+        <div className="columns-2 flex gap-4 items-center">
+          <h2 className="uppercase w-min">{t('common:sub-title')}</h2>
+          <p className="lined-text uppercase">CODE</p>
+        </div>
+          <h1 className="font-archivoBlank">{t('common:name')}</h1>
+          <h2 className="uppercase text-center">{t('common:at-the-moment')}</h2>
+      </div>
+      {/* Right column */}
+      <div className="w-min h-min hidden md:block">
+        <div className="flex columns-3 justify-center gap-2 items-center">
+          <div className="flex-col relative aspect-square h-10 lg:h-14">
+            <Image
+              src="/assets/arrow.svg"
+              alt=""
+              fill
+              className="dark:invert h-10 w-10"
+            />
+          </div>
+          <div className="flex-col">
+            <h3 className="archivoBlack">UTC*</h3>
+            <h3>[+1H]</h3>
+          </div>
+          <div className="flex-col">
+            <p className="lined-text">{t('common:based-in')}</p>
+          </div>
+        </div>
+        <h1 className="font-archivoBlack">{t('common:lastName')}</h1>
+        <div className="flex flex-row-reverse">
           <SocialIcons />
         </div>
-      </div>
-      <div className="absolute bottom-0 right-0 z-0">
-        <ParticleImage
-          src={"/foto.png"}
-          scale={options.scale}
-          width={options.width}
-          height={options.hight}
-          entropy={15}
-          maxParticles={4200}
-          particleOptions={particleOptions}
-          mouseMoveForce={motionForce}
-          touchMoveForce={clinkForce}
-          backgroundColor={'rgba(0,0,0,0)'}
-        />
+        <div className="flex flex-row-reverse">
+          <p className="text-4xl md:text-2xl lg:text-4xl xl:max-2xl:text-5xl pt-3">****</p>
+        </div>
       </div>
     </div>
-    
   );
 }
 

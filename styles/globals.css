@@ -6,6 +6,7 @@
 html {
   scroll-behavior: smooth;
 }
+
 .react-icons {
   vertical-align: middle;
 }
@@ -15,6 +16,30 @@ html {
   height: calc(var(--vh, 1vh) * 100);
 }
 
+@font-face {
+  font-family: "Archivo Black";
+  src: url("../public/fonts/Archivo_Black/ArchivoBlack-Regular.woff2") format('woff2');
+}
+
+@font-face {
+  font-family: "Linear Beam";
+  font-weight: 500;
+  src: url("../public/fonts/linear_beam/Linebeam.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Pixelmix";
+  font-weight: 500;
+  src: url("../public/fonts/pixelmix/pixelmix.woff2") format("woff2");
+}
+
+/*  @font-face {
+  font-family: "Pixelmix";
+  font-weight: 900;
+  src: url("/public/fonts/pixelmix/pixelmix_bold.ttf") format("ttf");
+} */
+
+
 @layer base {
 
   @supports (-webkit-touch-callout: none) {
@@ -23,49 +48,41 @@ html {
     }
   }
 
-  @font-face {
-    font-family: Whatever it takes;
-    font-weight: 400;
-    src: url("/fonts/whatever_it_takes/whatever_it_takes.woff2") format("woff2");
-  }
-
-  @font-face {
-    font-family: Whatever it takes;
-    font-weight: 800;
-    src: url("/fonts/whatever_it_takes/whatever_it_takes_bold.woff2") format("woff2");
-  }
-
-  @font-face {
-    font-family: Futura;
-    font-weight: 800;
-    src: url("/fonts/futura_extra_bold.woff2") format("woff2");
-  }
   
+
   body {
     @apply bg-[#f9f9f9] text-[#1b1b1b] tracking-wide;
     @apply dark:bg-black dark:text-gray-100;
   }
 
   h1 {
-    @apply font-bold;
+    @apply text-7xl sm:text-8xl md:text-6xl lg:text-8xl uppercase font-archivoBlack;
+    line-height: 1em;
+    letter-spacing: -0.08em;
   }
 
-  h1 {
-    @apply text-7xl sm:text-8xl md:text-9xl;
-  }
   h2 {
-    @apply text-lg sm:text-xl md:text-2xl;
+    @apply text-base sm:text-lg md:text-sm lg:text-lg font-pixelmix;
+    line-height: 1.2em;
+    font-family: "Pixelmix";
   }
+
   h3 {
-    @apply text-2xl sm:text-3xl md:text-4xl;
+    @apply text-xl sm:text-3xl md:text-xl lg:text-3xl font-archivoBlack;
+    text-align: center;
+    line-height: 1em;
+    letter-spacing: -0.1em;
   }
 
   li {
     @apply cursor-pointer text-base;
   }
 
-  .handwritten-text {
-    @apply font-whatever text-lg md:text-xl xl:text-3xl px-4;
+  .lined-text {
+    @apply text-5xl sm:text-7xl md:text-5xl lg:text-7xl font-linearBeam;
+    @apply dark:opacity-90;
+    line-height: 0.9em;
+    letter-spacing: -0.1em
   }
 
   p {
@@ -74,5 +91,6 @@ html {
 
   .social-icon {
     @apply cursor-pointer p-3 hover:scale-110 transition ease-in-out duration-150;
-  }
+  } 
+
 }

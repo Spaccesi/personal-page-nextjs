@@ -17,6 +17,10 @@ const Navbar = () => {
       link: '/'
     },
     // {
+    //   title: t('common:Resume'),
+    //   link: '/'
+    // },
+    // {
     //   title: t('common:Portfolio'),
     //   link: 'https://portfolio.spaccesi.com/'
     // }
@@ -28,8 +32,8 @@ const Navbar = () => {
   }
 
   return(
-    <div className='z-50 fixed w-full md:h-28 lg:h-36 h-24 border-black dark:border-white border-b-2'>
-      <div className='flex justify-between items-center h-full px-4 2xl:px-6 bg-gradient-to-r from-white dark:from-black/70'>
+    <div className='fixed w-full h-28 z-50'>
+      <div className='flex justify-between items-center h-full px-6 lg:px-10'>
         <Link href={'/'}>
           <Image src='/favicon.ico' width={50} height={50} alt='Agustin Spaccesi' />
         </Link>
@@ -40,7 +44,6 @@ const Navbar = () => {
               <li className='ml-10 hover:scale-110'>{link.title}</li>
             </Link>
           ))}
-            <li className='ml-10 hover:scale-110'><a href="assets/Resume-agustin-spaccesi.pdf" target="_blank">{t('common:Resume')}</a></li>
             <li className='ml-10'><LanguageSwitcher /></li>
             <li className='ml-10'><ThemeSwitcher /></li>
           </ul>
@@ -60,7 +63,6 @@ const Navbar = () => {
               <li className='ml-10 py-4 text-3xl uppercase hover:border-b' onClick={handleNav}>{link.title}</li>
             </Link>
           ))}
-          <li className='ml-10 py-4 text-3xl uppercase hover:border-b'><a href="assets/Resume-agustin-spaccesi.pdf" target="_blank">{t('common:Resume')}</a></li>
         </ul>
         <div className='my-auto flex justify-center'>
           <SocialIcons />
