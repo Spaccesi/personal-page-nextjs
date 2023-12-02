@@ -56,19 +56,19 @@ html {
   }
 
   h1 {
-    @apply text-8xl md:text-6xl lg:text-8xl xl:max-2xl:text-9xl uppercase font-archivoBlack;
-    line-height: 1.1em;
-    letter-spacing: -0.1em;
+    @apply text-7xl sm:text-8xl md:text-6xl lg:text-8xl uppercase font-archivoBlack;
+    line-height: 1em;
+    letter-spacing: -0.08em;
   }
 
   h2 {
-    @apply text-xl md:text-base lg:text-xl xl:max-2xl:text-2xl font-pixelmix;
+    @apply text-base sm:text-lg md:text-sm lg:text-lg font-pixelmix;
     line-height: 1.2em;
     font-family: "Pixelmix";
   }
 
   h3 {
-    @apply text-3xl md:text-xl lg:text-3xl xl:max-2xl:text-4xl font-archivoBlack;
+    @apply text-xl sm:text-3xl md:text-xl lg:text-3xl font-archivoBlack;
     text-align: center;
     line-height: 1em;
     letter-spacing: -0.1em;
@@ -79,7 +79,7 @@ html {
   }
 
   .lined-text {
-    @apply text-6xl md:text-5xl lg:text-7xl xl:max-2xl:text-8xl font-linearBeam;
+    @apply text-5xl sm:text-7xl md:text-5xl lg:text-7xl font-linearBeam;
     @apply dark:opacity-90;
     line-height: 0.9em;
     letter-spacing: -0.1em
@@ -93,7 +93,4 @@ html {
     @apply cursor-pointer p-3 hover:scale-110 transition ease-in-out duration-150;
   } 
 
-  #hero {
-    pointer-events: none;
-  }
 }
