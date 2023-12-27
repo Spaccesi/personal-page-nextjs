@@ -54,7 +54,7 @@ const BackgroundParticleImage = () => {
   }
 
   return (
-    <div className="flex absolute top-1/2 left-1/2  -translate-x-1/2 -translate-y-1/2 -z-50 pointer-events-auto h-screen">
+    <div className="flex absolute top-1/2 left-1/2  -translate-x-1/2 -translate-y-1/2 -z-50 pointer-events-auto h-screen bg-[#f9f9f9] text-[#1b1b1b] tracking-wide dark:bg-black dark:text-gray-100">
       <ParticleImage
         src={"/foto.png"}
         scale={options.scale}
