@@ -1,14 +1,14 @@
 {
   "title": "Hello world",
   "variable-example": "Using a variable {{count}}",
-  "Home": "Inicio",
+  "Home": "Home",
   "Portfolio": "Portfolio",
-  "About": "Sobre mí",
-  "Contact": "Contactar",
-  "based-in": "VLC",
+  "About": "About",
+  "Contac": "Contact",
   "name": "Agustin",
   "lastName": "Spaccesi",
-  "sub-title": "Ingeniero & Emprendedor",
+  "sub-title": "Ingegnere & imprenditore",
+  "based-in": "VLC",
   "at-the-moment": "FULLSTACK; FLUTTER; NESTJS; NEXTJS; TYPESCRIPT; PYTHON",
-  "Resume": "Curriculum"
+  "Resume": "Resume"
 }
