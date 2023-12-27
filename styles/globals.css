@@ -33,13 +33,6 @@ html {
   src: url("../public/fonts/pixelmix/pixelmix.woff2") format("woff2");
 }
 
-/*  @font-face {
-  font-family: "Pixelmix";
-  font-weight: 900;
-  src: url("/public/fonts/pixelmix/pixelmix_bold.ttf") format("ttf");
-} */
-
-
 @layer base {
 
   @supports (-webkit-touch-callout: none) {
@@ -48,7 +41,7 @@ html {
     }
   }
 
-  
+
 
   body {
     @apply bg-[#f9f9f9] text-[#1b1b1b] tracking-wide;
