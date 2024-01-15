@@ -14,7 +14,7 @@ const HeroSection = () => {
       <div className="w-min h-min">
         <div className="columns-2 flex gap-4 items-center">
           <h2 className="uppercase w-min">{t('common:sub-title')}</h2>
-          <p className="lined-text uppercase">CODE</p>
+          <p className="lined-text uppercase">{t('common:top-title')}</p>
         </div>
           <h1 className="font-archivoBlank">{t('common:name')}</h1>
           <h2 className="uppercase text-center">{t('common:at-the-moment')}</h2>
