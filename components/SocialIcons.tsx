@@ -1,4 +1,5 @@
-import { SiLinkedin, SiInstagram, SiGithub, SiGmail } from "react-icons/si";
+import { SiInstagram, SiGithub, SiGmail } from "react-icons/si";
+import { FaLinkedin } from "react-icons/fa6";
 import Link from "next/link";
 
 const SocialIcons = () => {
@@ -14,7 +15,7 @@ const SocialIcons = () => {
         <SiGithub size={24}/>
       </Link>
       <Link href={`https://www.linkedin.com/in/${process.env.LINKEDIN}/`} className="hover:scale-110">
-        <SiLinkedin size={24}/>
+        <FaLinkedin size={24}/>
       </Link>
     </div>
   );
