@@ -23,12 +23,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         </Script>
       </>
     )}
-    <Script id='screen-size-mobile' strategy='beforeInteractive'>
-      {
-        "document.documentElement.style.setProperty('--vh', window.innerHeight * 0.01 + 'px')"
-      }
-    </Script>
-    
+
     <Component {...pageProps} />
   </ThemeProvider>
   )
