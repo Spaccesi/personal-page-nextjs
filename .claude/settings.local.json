@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pnpm lint:*)",
+      "Bash(pnpm remove:*)",
+      "Bash(timeout 5 pnpm dev:*)"
+    ]
+  }
+}
