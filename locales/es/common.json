@@ -11,5 +11,13 @@
   "sub-title": "Ingeniero & Emprendedor",
   "at-the-moment": "INNOVA, ITERA, CELEBRA: APASIONADO POR CREAR FUTUROS BRILLANTES",
   "Resume": "Curriculum",
-  "top-title": "TECH"
+  "top-title": "TECH",
+  "seo": {
+    "title": "Agustin Spaccesi - Ingeniero & Emprendedor",
+    "siteName": "Agustin Spaccesi",
+    "description": "Ingeniero & Emprendedor apasionado por crear futuros brillantes a través de la innovación y la tecnología. Basado en Valencia, España.",
+    "keywords": "ingeniero, emprendedor, desarrollador de software, tecnología, innovación, Valencia",
+    "author": "Agustin Spaccesi",
+    "twitterHandle": "@agustinspaccesi"
+  }
 }
