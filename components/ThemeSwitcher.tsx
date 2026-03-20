@@ -1,26 +1,25 @@
-import React from "react";
-import { useTheme } from "next-themes";
-import {BsFillMoonFill, BsFillSunFill } from 'react-icons/bs'
+import { useTheme } from 'next-themes';
+import { BsFillMoonFill, BsFillSunFill } from 'react-icons/bs';
 
 const ThemeSwitcher = () => {
-  
   const { systemTheme, theme, setTheme } = useTheme();
 
   const currentTheme = theme === 'system' ? systemTheme : theme;
+  const isDark = currentTheme === 'dark';
 
-  function changeTheme() {
-    setTheme(currentTheme === 'light' ? 'dark' : 'light')
+  const toggleTheme = () => {
+    setTheme(isDark ? 'light' : 'dark');
   };
 
   return (
-    <button onClick={changeTheme} className='mt-1 hover:scale-110'>
-      {
-        currentTheme === 'light'
-        ? <BsFillMoonFill size={18}/> 
-        : <BsFillSunFill size={18}/>
-      }
+    <button
+      onClick={toggleTheme}
+      className='mt-1 hover:scale-110'
+      aria-label={`Switch to ${isDark ? 'light' : 'dark'} mode`}
+    >
+      {isDark ? <BsFillSunFill size={18} /> : <BsFillMoonFill size={18} />}
     </button>
   );
-}
+};
 
 export default ThemeSwitcher;

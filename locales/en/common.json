@@ -1,16 +1,14 @@
 {
-  "title": "Hello world",
-  "variable-example": "Using a variable {{count}}",
   "Home": "Home",
   "Portfolio": "Portfolio",
   "About": "About",
-  "Contac": "Contact",
+  "Contact": "Contact",
+  "Resume": "Resume",
   "name": "Agustin",
   "lastName": "Spaccesi",
   "sub-title": "Engineer & Entrepreneur",
   "based-in": "VLC",
   "at-the-moment": "INNOVATE, ITERATE, CELEBRATE: PASSIONATE ABOUT CRAFTING BRIGHT FUTURES",
-  "Resume": "Resume",
   "top-title": "TECH",
   "seo": {
     "title": "Agustin Spaccesi - Engineer & Entrepreneur",

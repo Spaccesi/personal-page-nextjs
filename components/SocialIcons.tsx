@@ -1,24 +1,23 @@
-import { SiInstagram, SiGithub, SiGmail } from "react-icons/si";
-import { FaLinkedin } from "react-icons/fa6";
-import Link from "next/link";
+import Link from 'next/link';
+import { SOCIAL_LINKS } from '@/constants/social';
 
 const SocialIcons = () => {
   return (
     <div className='flex gap-8 w-min pointer-events-auto'>
-      {/* <Link href={``} className="hover:scale-110">
-        <SiInstagram size={24}/>
-      </Link> */}
-      <Link href={`mailto:${process.env.EMAIL}`} className="hover:scale-110">
-        <SiGmail size={24}/>
-      </Link>
-      <Link href={`https://github.com/${process.env.GITHUB}/`} className="hover:scale-110">
-        <SiGithub size={24}/>
-      </Link>
-      <Link href={`https://www.linkedin.com/in/${process.env.LINKEDIN}/`} className="hover:scale-110">
-        <FaLinkedin size={24}/>
-      </Link>
+      {SOCIAL_LINKS.map(({ icon: Icon, href, label }) => (
+        <Link
+          key={label}
+          href={href}
+          className='hover:scale-110'
+          aria-label={label}
+          target={href.startsWith('http') ? '_blank' : undefined}
+          rel={href.startsWith('http') ? 'noopener noreferrer' : undefined}
+        >
+          <Icon size={24} />
+        </Link>
+      ))}
     </div>
   );
-}
+};
 
 export default SocialIcons;
