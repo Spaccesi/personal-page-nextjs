@@ -140,6 +140,67 @@ This project follows modern React and TypeScript best practices:
 - **Accessibility**: ARIA labels and semantic HTML throughout
 - **Performance**: Optimized with Next.js features and monitored with Vercel Speed Insights
 
+## CI/CD Pipeline
+
+This project uses GitHub Actions for continuous integration and deployment:
+
+### Automated Checks (Required for PRs)
+
+- ✅ **Linting** - ESLint code style verification
+- ✅ **Type Checking** - TypeScript type validation
+- ✅ **Unit Tests** - Complete test suite execution
+- ✅ **Test Coverage** - Coverage report generation
+- ✅ **Build Verification** - Production build validation
+- ✅ **Security Scanning** - CodeQL vulnerability detection
+
+### Branch Protection
+
+Both `main` and `dev` branches are protected:
+
+- All changes must go through pull requests
+- All CI checks must pass before merging
+- Code review required (configurable)
+- No direct pushes allowed
+
+### Workflows
+
+- **CI Pipeline** (`.github/workflows/ci.yml`) - Runs on every PR and push
+- **Security Analysis** (`.github/workflows/codeql.yml`) - Weekly security scans
+- **Dependency Updates** (`.github/dependabot.yml`) - Automated dependency PRs
+
+## Contributing
+
+1. **Create a feature branch** from `dev`:
+   ```bash
+   git checkout dev
+   git pull origin dev
+   git checkout -b feature/your-feature-name
+   ```
+
+2. **Make your changes** and ensure quality:
+   ```bash
+   pnpm lint          # Check code style
+   pnpm test          # Run tests
+   pnpm build         # Verify build
+   ```
+
+3. **Commit your changes** using [Conventional Commits](https://www.conventionalcommits.org/):
+   ```bash
+   git commit -m "feat: add new feature"
+   git commit -m "fix: resolve bug in component"
+   git commit -m "docs: update README"
+   ```
+
+4. **Push and create a Pull Request**:
+   ```bash
+   git push origin feature/your-feature-name
+   ```
+   Then open a PR on GitHub targeting the `dev` branch.
+
+5. **Wait for CI checks** to pass and address any feedback.
+
+6. **Merge** once approved and all checks pass.
+
 ## Deployment
 
 This project is configured for deployment on Vercel. Simply connect your repository to Vercel for automatic deployments on every push.

@@ -15,7 +15,6 @@ describe('ThemeSwitcher', () => {
       themes: ['light', 'dark'],
       forcedTheme: undefined,
       resolvedTheme: 'light',
-      setTheme: vi.fn(),
     } as any);
 
     render(<ThemeSwitcher />);
