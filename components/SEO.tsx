@@ -31,7 +31,7 @@ const SEO: React.FC<SEOProps> = ({
   // Use provided values or fallback to translations
   const siteDescription = description || t('seo.description');
   const siteKeywords = keywords || t('seo.keywords');
-  const fullTitle = title ? `${title} | ${t('seo.siteName')}` : t('seo.title');
+  const fullTitle = title || t('seo.title');
 
   // Build the canonical URL
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://spaccesi.com';
