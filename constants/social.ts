@@ -5,17 +5,17 @@ import { SocialLink } from '@/types';
 export const SOCIAL_LINKS: SocialLink[] = [
   {
     icon: SiGmail,
-    href: 'mailto:agustin@spaccesi.com',
+    href: `mailto:${process.env.EMAIL}`,
     label: 'Email',
   },
   {
     icon: SiGithub,
-    href: 'https://github.com/AgustinSRG',
+    href: `https://github.com/${process.env.GITHUB}`,
     label: 'GitHub',
   },
   {
     icon: FaLinkedin,
-    href: 'https://www.linkedin.com/in/agustin-spaccesi',
+    href: `https://www.linkedin.com/in/${process.env.LINKEDIN}`,
     label: 'LinkedIn',
   },
 ];
