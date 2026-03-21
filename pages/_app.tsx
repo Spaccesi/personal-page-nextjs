@@ -1,10 +1,13 @@
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 import Script from 'next/script'
+import { useRouter } from 'next/router'
 import { ThemeProvider } from 'next-themes'
 import { SpeedInsights } from "@vercel/speed-insights/next"
 
 function MyApp({ Component, pageProps }: AppProps) {
+  const { locale } = useRouter();
+
   return (
   <ThemeProvider attribute="class" enableSystem={true}>
     {process.env.NEXT_PUBLIC_ENV === "production" && (
@@ -26,7 +29,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       </>
     )}
 
-    <Component {...pageProps} />
+    <Component {...pageProps} key={locale} />
   </ThemeProvider>
   )
 }

@@ -1,24 +1,31 @@
 import { useRouter } from 'next/router';
-import Link from 'next/link';
 import { LOCALE_FLAGS, DEFAULT_LOCALE } from '@/constants/locales';
 import { Locale } from '@/types';
 
 const LanguageSwitcher = () => {
-  const { locale, locales, asPath } = useRouter();
+  const router = useRouter();
+  const { locale, locales, pathname, query } = router;
 
   const currentLocale = (locale ?? DEFAULT_LOCALE) as Locale;
   const currentLocaleIndex = locales?.indexOf(currentLocale) ?? 0;
-  const nextLocale = locales?.[currentLocaleIndex + 1] ?? DEFAULT_LOCALE;
+
+  // Calculate next locale with proper cycling
+  const nextLocaleIndex = locales ? (currentLocaleIndex + 1) % locales.length : 0;
+  const nextLocale = locales?.[nextLocaleIndex] ?? DEFAULT_LOCALE;
+
+  const handleLocaleChange = () => {
+    router.push({ pathname, query }, undefined, { locale: nextLocale });
+  };
 
   return (
-    <Link
-      href={asPath}
-      className='text-lg hover:text-xl'
-      locale={nextLocale}
+    <button
+      onClick={handleLocaleChange}
+      className='text-lg hover:text-xl cursor-pointer'
       aria-label={`Switch to ${nextLocale}`}
+      type='button'
     >
       {LOCALE_FLAGS[currentLocale].icon}
-    </Link>
+    </button>
   );
 };
 
