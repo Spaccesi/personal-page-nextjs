@@ -29,7 +29,6 @@ const SEO: React.FC<SEOProps> = ({
   const router = useRouter();
 
   // Use provided values or fallback to translations
-  const siteTitle = title || t('seo.title');
   const siteDescription = description || t('seo.description');
   const siteKeywords = keywords || t('seo.keywords');
   const fullTitle = title ? `${title} | ${t('seo.siteName')}` : t('seo.title');
