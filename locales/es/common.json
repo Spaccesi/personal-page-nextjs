@@ -1,15 +1,21 @@
 {
-  "title": "Hello world",
-  "variable-example": "Using a variable {{count}}",
   "Home": "Inicio",
   "Portfolio": "Portfolio",
   "About": "Sobre mí",
   "Contact": "Contactar",
-  "based-in": "VLC",
+  "Resume": "Curriculum",
   "name": "Agustin",
   "lastName": "Spaccesi",
   "sub-title": "Ingeniero & Emprendedor",
+  "based-in": "VLC",
   "at-the-moment": "INNOVA, ITERA, CELEBRA: APASIONADO POR CREAR FUTUROS BRILLANTES",
-  "Resume": "Curriculum",
-  "top-title": "TECH"
+  "top-title": "TECH",
+  "seo": {
+    "title": "Agustin Spaccesi - Ingeniero & Emprendedor",
+    "siteName": "Agustin Spaccesi",
+    "description": "Ingeniero & Emprendedor apasionado por crear futuros brillantes a través de la innovación y la tecnología. Basado en Valencia, España.",
+    "keywords": "ingeniero, emprendedor, desarrollador de software, tecnología, innovación, Valencia",
+    "author": "Agustin Spaccesi",
+    "twitterHandle": "@agustinspaccesi"
+  }
 }

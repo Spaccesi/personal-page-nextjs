@@ -1,8 +1,8 @@
 # Personal Portfolio Website
 
-A modern, multilingual personal portfolio website built with Next.js, TypeScript, and Tailwind CSS.
+A modern, multilingual personal website built with Next.js, TypeScript, Tailwind CSS, and Vitest.
 
-[![My Skills](https://skillicons.dev/icons?i=nextjs,ts,tailwind,vercel)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=nextjs,ts,tailwind,vitest,vercel)](https://skillicons.dev)
 
 **Live Demo:** [agustin.spaccesi.com](https://agustin.spaccesi.com)
 
@@ -14,6 +14,9 @@ A modern, multilingual personal portfolio website built with Next.js, TypeScript
 - **Responsive Design**: Fully responsive layout built with Tailwind CSS
 - **TypeScript**: Full type safety throughout the application
 - **Social Links**: Integrated social media icons and links
+- **Testing**: Comprehensive test suite with Vitest and React Testing Library
+- **SEO Optimized**: Multi-language sitemap and SEO components
+- **Performance Monitoring**: Vercel Speed Insights integration
 
 ## Tech Stack
 
@@ -23,6 +26,9 @@ A modern, multilingual personal portfolio website built with Next.js, TypeScript
 - **UI Components**: React 19.2.4
 - **i18n**: next-translate 2.6.2
 - **Icons**: react-icons 5.6.0
+- **Testing**: Vitest 4.1.0 + React Testing Library 16.3.2
+- **Theme**: next-themes 0.4.6
+- **Analytics**: @vercel/speed-insights 2.0.0
 - **Deployment**: [Vercel](https://vercel.com/)
 
 ## Prerequisites
@@ -83,17 +89,117 @@ Run ESLint to check code quality:
 pnpm lint
 ```
 
+### Testing
+
+Run the test suite:
+```bash
+# Run tests once
+pnpm test
+
+# Run tests in watch mode
+pnpm test -- --watch
+
+# Run tests with UI interface
+pnpm test:ui
+
+# Generate coverage report
+pnpm test:coverage
+```
+
+All tests are located in the `__test__/` directory with subdirectories mirroring the source structure. See `__test__/README.md` for more details on writing and running tests.
+
 ## Project Structure
 
 ```
 personal-page-nextjs/
-├── components/        # React components
-├── locales/          # Translation files
-├── pages/            # Next.js pages
-├── public/           # Static assets
-├── styles/           # Global styles
+├── __test__/         # Test files (Vitest + React Testing Library)
+│   ├── components/   # Component tests
+│   ├── hooks/        # Hook tests
+│   ├── constants/    # Constant validation tests
+│   └── setup.tsx     # Test environment configuration
+├── components/       # React components
+├── constants/        # Application constants (locales, social links)
+├── hooks/            # Custom React hooks
+├── locales/          # Translation files (en, es, de, it)
+├── pages/            # Next.js pages and API routes
+├── public/           # Static assets (images, favicon)
+├── styles/           # Global styles and Tailwind configuration
+├── types/            # TypeScript type definitions
 └── ...
 ```
+
+## Code Quality
+
+This project follows modern React and TypeScript best practices:
+
+- **Type Safety**: Full TypeScript coverage with strict mode enabled
+- **Path Aliases**: Clean imports using `@/` aliases configured in `tsconfig.json`
+- **Component Architecture**: Modular, reusable components with proper separation of concerns
+- **Constants**: Centralized configuration in dedicated constant files
+- **Testing**: 32 tests covering components, hooks, and utilities
+- **Accessibility**: ARIA labels and semantic HTML throughout
+- **Performance**: Optimized with Next.js features and monitored with Vercel Speed Insights
+
+## CI/CD Pipeline
+
+This project uses GitHub Actions for continuous integration and deployment:
+
+### Automated Checks (Required for PRs)
+
+- ✅ **Linting** - ESLint code style verification
+- ✅ **Type Checking** - TypeScript type validation
+- ✅ **Unit Tests** - Complete test suite execution
+- ✅ **Test Coverage** - Coverage report generation
+- ✅ **Build Verification** - Production build validation
+- ✅ **Security Scanning** - CodeQL vulnerability detection
+
+### Branch Protection
+
+Both `main` and `dev` branches are protected:
+
+- All changes must go through pull requests
+- All CI checks must pass before merging
+- Code review required (configurable)
+- No direct pushes allowed
+
+### Workflows
+
+- **CI Pipeline** (`.github/workflows/ci.yml`) - Runs on every PR and push
+- **Security Analysis** (`.github/workflows/codeql.yml`) - Weekly security scans
+- **Dependency Updates** (`.github/dependabot.yml`) - Automated dependency PRs
+
+## Contributing
+
+1. **Create a feature branch** from `dev`:
+   ```bash
+   git checkout dev
+   git pull origin dev
+   git checkout -b feature/your-feature-name
+   ```
+
+2. **Make your changes** and ensure quality:
+   ```bash
+   pnpm lint          # Check code style
+   pnpm test          # Run tests
+   pnpm build         # Verify build
+   ```
+
+3. **Commit your changes** using [Conventional Commits](https://www.conventionalcommits.org/):
+   ```bash
+   git commit -m "feat: add new feature"
+   git commit -m "fix: resolve bug in component"
+   git commit -m "docs: update README"
+   ```
+
+4. **Push and create a Pull Request**:
+   ```bash
+   git push origin feature/your-feature-name
+   ```
+   Then open a PR on GitHub targeting the `dev` branch.
+
+5. **Wait for CI checks** to pass and address any feedback.
+
+6. **Merge** once approved and all checks pass.
 
 ## Deployment
 
